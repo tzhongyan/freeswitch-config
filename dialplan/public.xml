@@ -13,7 +13,15 @@
 <include>
   <!-- <context name="moceangw"> -->
   <context name="public">
-    <extension name="Local_Extension">
+    <extension name="Local Extension">
+      <condition field="destination_number" expression="^(10[01][0-9])$">
+        <action application="set" data="effective_caller_id_number=${outbound_caller_id_number}"/>
+        <action application="set" data="effective_caller_id_name=${outbound_caller_id_name}"/>
+        <action application="bridge" data="user/$1" />
+      </condition>
+    </extension>
+
+    <extension name="All Extension">
       <condition field="destination_number" expression="^(.*)$">
         <action application="set" data="effective_caller_id_number=${outbound_caller_id_number}"/>
         <action application="set" data="effective_caller_id_name=${outbound_caller_id_name}"/>
