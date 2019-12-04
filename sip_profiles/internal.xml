@@ -15,7 +15,20 @@
   </aliases>
   <!-- Outbound Registrations -->
   <gateways>
+    <gateway name="moceangw">
+        <param name="realm" value="10.168.10.21"/>
+        <param name="username" value="abbccd"/>
+        <param name="password" value="bbccde"/>
+        <param name="extension" value="true"/>
+        <param name="caller-id-in-from" value="true"/>
+        <param name="register" value="false"/>
 
+        <variables>
+        <variable name="absolute_codec_string" value="OPUS,PCMU,PCMA" direction="outbound"/>
+        <variable name="dtmf_type" value="rfc2833" direction="outbound"/>
+        <variable name="verbose_sdp" value="true"/>
+        </variables>
+    </gateway>
   </gateways>
 
   <domains>
