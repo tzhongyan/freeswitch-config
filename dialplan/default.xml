@@ -22,9 +22,16 @@
       </condition>
     </extension>
 
-    <extension name="park_all_calls">
+    <!-- <extension name="park_all_calls">
       <condition field="destination_number" expression="^(.*)$">
         <action application="park"/>
+      </condition>
+    </extension> -->
+    <extension name="All Extension">
+      <condition field="destination_number" expression="^(.*)$">
+        <action application="set" data="effective_caller_id_number=${outbound_caller_id_number}"/>
+        <action application="set" data="effective_caller_id_name=${outbound_caller_id_name}"/>
+        <action application="bridge" data="sofia/gateway/moceangw/$1" />
       </condition>
     </extension>
   </context>

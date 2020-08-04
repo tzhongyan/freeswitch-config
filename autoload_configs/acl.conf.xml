@@ -26,6 +26,7 @@
       <!-- use cidr= if you wish to allow ip ranges to this domains acl. -->
       <node type="allow" cidr="10.168.10.0/24"/>
       <node type="allow" cidr="10.168.100.0/24"/>
+      <node type="allow" cidr="202.129.163.74/32"/>
     </list>
 
   </network-lists>

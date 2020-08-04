@@ -260,7 +260,7 @@
     <param name="accept-blind-reg" value="true"/>
 
     <!-- accept any authentication without actually checking (not a good feature for most people) -->
-    <!-- <param name="accept-blind-auth" value="true"/> -->
+    <param name="accept-blind-auth" value="true"/>
 
     <!-- suppress CNG on this profile or per call with the 'suppress_cng' variable -->
     <!-- <param name="suppress-cng" value="true"/> -->
